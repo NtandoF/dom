@@ -10,7 +10,7 @@ var criticalLevelSetting = document.querySelector(".criticalLevelSetting")
 //get a reference to the add button
 var updateBtn = document.querySelector(".updateSettings")
 //get a reference t the 'Update settings' button
-var SettingsAddBtn = document.querySelector(".SettingsAddBtn")
+var settingsAddBtn = document.querySelector(".SettingsAddBtn")
 // create a variables that will keep track of all the settings
 var callSett = 0;
 var smsSett = 0;
@@ -57,11 +57,11 @@ updateBtn.addEventListener('click', settings);
        // billItemType will be 'call' or 'sms'
 
        if (billType === call){
-          callSett += callcost;
+          callSett += callTotalSetting;
        }
 
        else if (billType === sms){
-        smsSett += smscost;
+        smsSett += smsTotalSetting;
        }
     }
     callTotalSetting.innerHTML =  callSett.toFixed(2);
@@ -71,4 +71,4 @@ updateBtn.addEventListener('click', settings);
 
 }
 //add an event listener for when the add button is pressed
-SettingsAddBtn.addEventListener('click', billtype);
+settingsAddBtn.addEventListener('click', billtype);
